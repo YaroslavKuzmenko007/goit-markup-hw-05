@@ -103,7 +103,6 @@ img {
 
 .menu {
   display: flex;
-  padding: 32px 0;
 }
 
 .menu-item + .menu-item {
@@ -120,6 +119,7 @@ img {
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
+  padding: 32px 0;
 }
 
 .menu-link {
@@ -127,12 +127,14 @@ img {
   color: var(--main-color-font);
 }
 
-.menu-link:hover::after,
-.menu-link:focus::after {
-  display: inline-block;
+.current {
+  color: var(--color-acent);
+}
+
+.current::after {
   content: "";
   position: absolute;
-  bottom: -33px;
+  bottom: -1px;
   left: 0;
   width: 100%;
   height: 4px;
